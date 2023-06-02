@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class Service {
-  server: string = 'http://actuality-backend.eba-rz9cqmj5.us-east-1.elasticbeanstalk.com/';
+  server: string = 'https://api.comsier.com/;
 
   constructor(private _http: HttpClient) {}
 
