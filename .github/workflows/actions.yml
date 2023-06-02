@@ -32,7 +32,7 @@ jobs:
           aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           application_name: actuality-frontend
-          environment_name: Actuality-frontend-dev
+          environment_name: Actuality
           existing_bucket_name: actuality-data
           version_label: "actuality-${{ steps.format-time.outputs.replaced }}" 
           region: us-east-1
