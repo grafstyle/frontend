@@ -12,7 +12,7 @@ RUN npm install --force
 
 COPY . .
 
-RUN npm run build
+RUN npm run build --force
 
 
 ## Stage 2: Run ###
