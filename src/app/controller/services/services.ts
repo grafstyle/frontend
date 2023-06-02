@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class Service {
-  server: string = 'http://localhost:3500/';
+  server: string = 'http://actuality-backend.eba-rz9cqmj5.us-east-1.elasticbeanstalk.com/';
 
   constructor(private _http: HttpClient) {}
 
