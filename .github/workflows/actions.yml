@@ -33,6 +33,6 @@ jobs:
           aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           application_name: actuality-frontend
           environment_name: Actuality-frontend
-          version_label: "actuality-2023-06-02T03-05-30-657Z" 
+          version_label: "actuality-2023-06-02T03-05-30-0000" 
           region: us-east-1
           deployment_package: deploy.zip
