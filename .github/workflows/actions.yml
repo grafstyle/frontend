@@ -22,6 +22,6 @@ jobs:
           environment_name: Actuality-frontend-dev
           existing_bucket_name: actuality-data
           use_existing_version_if_available: true
-          version_label: "Actuality-latest"
+          version_label: "Actuality-latest-1"
           region: us-east-1
           deployment_package: deploy.zip
