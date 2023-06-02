@@ -12,6 +12,19 @@ jobs:
       
       - name: Generate Deployment Package
         run: zip -r deploy.zip . -x '*.git*'
+        
+      - name: Get timestamp
+        uses: gerred/actions/current-time@master
+        id: current-time
+        
+      - name: Run string replace
+        uses: frabert/replace-string-action@master
+        id: format-time
+        with:
+          pattern: '[:\.]+'
+          string: "${{ steps.current-time.outputs.time }}"
+          replace-with: '-'
+          flags: 'g'
        
       - name: Deploy to EB 
         uses: einaregilsson/beanstalk-deploy@v21
@@ -21,7 +34,6 @@ jobs:
           application_name: actuality-frontend
           environment_name: Actuality-frontend-dev
           existing_bucket_name: actuality-data
-          use_existing_version_if_available: true
-          version_label: "Actuality-latest-1"
+          version_label: "actuality-${{ steps.format-time.outputs.replaced }}" 
           region: us-east-1
           deployment_package: deploy.zip
