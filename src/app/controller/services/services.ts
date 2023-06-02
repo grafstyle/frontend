@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class Service {
-  server: string = 'https://api.comsier.com/;
+  server: string = "https://api.comsier.com/";
 
   constructor(private _http: HttpClient) {}
 
