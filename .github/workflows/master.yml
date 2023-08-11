@@ -25,5 +25,6 @@ jobs:
           VALIDATE_ALL_CODEBASE: true
           TYPESCRIPT_DEFAULT_STYLE: false
           VALIDATE_TYPESCRIPT_ES: true
-          VALIDATE_HTML: true
+          VALIDATE_HTML: false
+          VALIDATE_CSS: true
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
