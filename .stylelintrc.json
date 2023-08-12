@@ -1,6 +1,6 @@
 {
   "rules": {
-"string-no-newline": false
+"string-no-newline": false,
 "no-descending-specificity": true
   }
 }
