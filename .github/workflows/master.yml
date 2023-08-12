@@ -26,8 +26,7 @@ jobs:
           FILTER_REGEX_EXCLUDE: (.eslintrc.json, .eslintrc.json, .husky/ , .dockerignore, .editorconfig, .gitignore)
           VALIDATE_TYPESCRIPT_STANDARD: false
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    
-
+          
     deploy:
       name: Deploy to AWS
       needs: verification
@@ -35,10 +34,9 @@ jobs:
       steps:
         - name: Checkout source code
           uses: actions/checkout@v2
-        
+          
         - name: Generate Deployment Package
           run: zip -r deploy.zip . -x '*.git*'
-          
         - name: Get timestamp
           uses: gerred/actions/current-time@master
           id: current-time
