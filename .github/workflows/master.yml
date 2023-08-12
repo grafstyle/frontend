@@ -22,7 +22,7 @@ jobs:
         uses: github/super-linter@v4
         env:
           VALIDATE_ALL_CODEBASE: false
-          FILTER_REGEX_EXCLUDE: (.eslintrc.json, .eslintrc.json, 
+          FILTER_REGEX_EXCLUDE: (.eslintrc.json, .eslintrc.json,
                                 .husky/ , .dockerignore,
                                 .editorconfig, .gitignore)
           VALIDATE_TYPESCRIPT_STANDARD: false
