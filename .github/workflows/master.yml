@@ -7,9 +7,9 @@ on:
     branches: [ master ]
 
 jobs:
+
     verification: 
       name: Code verification
-
       runs-on: ubuntu-latest
       steps:
 
