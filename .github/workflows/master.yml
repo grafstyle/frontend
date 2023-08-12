@@ -30,6 +30,7 @@ jobs:
 
     deploy: 
       name: Deploy to AWS
+      needs: verification
       runs-on: ubuntu-latest
       steps:
         - name: Checkout source code
