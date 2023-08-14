@@ -33,21 +33,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     
     
-  cache:
-        name: Save cache
-        needs: verification
-        runs-on: ubuntu-latest
-        steps:
-        - name: Get npm cache directory
-          id: npm-cache-dir
-          shell: bash
-          run: echo "dir=$(npm config get cache)" >> ${GITHUB_OUTPUT}
-      
-        - uses: actions/cache@v3
-          with:
-            path: path/to/dependencies
-            key: ${{ runner.os }}-${{ steps.get-date.outputs.date }}-${{ hashFiles('**/lockfiles') }}
-
   deploy:
     name: Deploy to AWS
     needs: verification
